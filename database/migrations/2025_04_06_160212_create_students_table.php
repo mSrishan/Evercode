@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string("name");
+            $table->string("phone");
+            $table->string("email")->nullable();
+            $table->timestamps(); //created_at
         });
     }
 
